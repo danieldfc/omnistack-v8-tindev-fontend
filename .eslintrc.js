@@ -12,6 +12,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -29,6 +30,8 @@ module.exports = {
       'warn',
       { extensions: ['.js', '.jsx'] }
     ],
-    'react/prefer-default-export': 'off'
+    'import/prefer-default-export': 'off',
+    'no-console': 'off',
+    'no-underscore-dangle': 'off',
   },
 };
