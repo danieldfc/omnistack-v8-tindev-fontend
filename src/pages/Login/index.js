@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import api from '../../services/api';
 
@@ -18,7 +19,7 @@ export default function Login({ history }) {
 
     const { _id } = response.data;
 
-    history.push(`/devs/${_id}`);
+    history.push(`/dev/${_id}`);
   }
 
   return (
@@ -35,3 +36,7 @@ export default function Login({ history }) {
     </Container>
   );
 }
+
+Login.propTypes = {
+  history: PropTypes.object.isRequired,
+};
